@@ -1,36 +1,191 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📚 KoLang - 스토리 기반 한국어 학습 플랫폼
 
-## Getting Started
+> **한국어 학습자들을 위한 인터랙티브 스토리 기반 언어학습 플랫폼**
+> 재미있는 스토리와 게임 같은 학습으로 자연스럽게 한국어를 마스터하세요! 🚀
 
-First, run the development server:
+## 🎯 프로젝트 개요
 
+**KoLang**는 외국인 한국어 학습자를 위한 현대적이고 직관적인 언어학습 플랫폼입니다. 
+스토리텔링과 인터랙티브한 게임 요소를 결합하여 효과적이고 재미있는 학습 경험을 제공합니다.
+
+### 서비스 특징
+- 📖 **스토리 기반 학습**: 실생활 상황을 바탕으로 한 흥미로운 스토리
+- 🔊 **음성 지원 학습**: Web Speech API를 활용한 한국어 발음 연습
+- 🎮 **인터랙티브 퀴즈**: 드래그앤드롭 기반의 단어 배열 게임
+- 📊 **개인화된 진도 관리**: 학습 통계 및 목표 달성 추적
+- 📱 **반응형 디자인**: 모바일, 태블릿, 데스크톱 완벽 지원
+
+## 🛠️ 기술 스택
+
+### Frontend
+- **Next.js 15.5** - App Router, Turbopack 빌드 시스템
+- **React 19.1** - 최신 Server Components 및 훅 활용
+- **TypeScript** - 타입 안전성 및 개발 효율성 확보
+- **Tailwind CSS** - 모던하고 일관된 UI 스타일링
+- **shadcn/ui** - 재사용 가능한 UI 컴포넌트 라이브러리
+
+### 주요 라이브러리
+- **Lucide React** - 아이콘 시스템
+- **Radix UI** - 접근성이 뛰어난 기본 컴포넌트
+- **Web Speech API** - 브라우저 네이티브 TTS 기능
+
+## ✨ 주요 기능
+
+### 🎓 학습 시스템
+- **스토리 선택**: 레벨별(초급/중급/고급) 학습 콘텐츠 제공
+- **문장 읽기**: TTS 음성 지원 및 한글 발음 표기
+- **번역 지원**: 한국어-영어 실시간 번역 기능
+- **진도 추적**: 개인별 학습 완료율 및 성취도 관리
+
+### 🎯 인터랙티브 퀴즈
+- **드래그앤드롭 인터페이스**: 직관적인 단어 배열 게임
+- **즉시 피드백**: 실시간 정답 검증 및 결과 표시
+- **재시도 시스템**: 오답 시 힌트 제공 및 재도전 기회
+- **터치 최적화**: 모바일 디바이스 완벽 지원
+
+### 📈 학습 대시보드
+- **통계 시각화**: 학습 시간, 완료 스토리, 연속 학습일 추적
+- **목표 설정**: 개인 맞춤 주간/일간 학습 목표
+- **성취 배지**: 학습 동기부여를 위한 게이미피케이션
+- **학습 기록**: 최근 활동 및 진행 상황 요약
+
+## 🚀 시작하기
+
+### 요구사항
+- Node.js 18.0 이상
+- Yarn 4.9.2 (권장)
+
+### 설치 및 실행
+
+1. **저장소 클론**
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone <repository-url>
+cd ko-lang-web
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. **의존성 설치**
+```bash
+yarn install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. **개발 서버 실행**
+```bash
+yarn dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. **브라우저에서 확인**
+[http://localhost:3000](http://localhost:3000)에서 애플리케이션을 확인하세요.
 
-## Learn More
+### 기타 스크립트
+```bash
+# 프로덕션 빌드
+yarn build
 
-To learn more about Next.js, take a look at the following resources:
+# 프로덕션 서버 실행
+yarn start
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# 린트 검사
+yarn lint
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📱 화면 구성
 
-## Deploy on Vercel
+### 🏠 메인 페이지
+- 서비스 소개 및 핵심 기능 안내
+- 인기 스토리 미리보기
+- 학습 시작 및 퀴즈 체험 버튼
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 📚 스토리 페이지
+- 레벨별 스토리 목록 및 선택
+- 학습 진도 시각화
+- 난이도별 필터링
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 📖 학습 페이지
+- 문장별 TTS 음성 재생
+- 한글 발음 표기 및 영어 번역
+- 학습 진도 및 다음 문장 이동
+
+### 🎮 퀴즈 페이지
+- 드래그앤드롭 단어 배열 게임
+- 실시간 정답 피드백
+- 재시도 및 힌트 시스템
+
+### 📊 대시보드 페이지
+- 개인 학습 통계 및 성취도
+- 연속 학습일 및 목표 달성률
+- 최근 활동 내역
+
+## 🎨 디자인 시스템
+
+### UI/UX 원칙
+- **직관적 인터페이스**: Toss 스타일의 심플하고 명확한 디자인
+- **모바일 우선**: 모바일 사용자 경험 최적화
+- **접근성**: WCAG 2.1 가이드라인 준수
+- **일관성**: 통일된 컬러 팔레트 및 타이포그래피
+
+### 컴포넌트 구조
+```
+src/components/
+├── ui/           # 기본 UI 컴포넌트
+├── Header.tsx    # 네비게이션 헤더
+├── StoryCard.tsx # 스토리 카드 컴포넌트
+├── SentenceReader.tsx    # 문장 학습 컴포넌트
+├── WordArrangeQuiz.tsx   # 퀴즈 컴포넌트
+└── LearningDashboard.tsx # 학습 대시보드
+```
+
+## 🔧 개발 아키텍처
+
+### 프로젝트 구조
+```
+ko-lang-web/
+├── src/
+│   ├── app/              # Next.js 앱 라우터
+│   ├── components/       # React 컴포넌트
+│   └── lib/             # 유틸리티 및 데이터
+├── docs/                # 프로젝트 문서
+├── public/              # 정적 리소스
+└── package.json         # 프로젝트 설정
+```
+
+### 개발 원칙
+- **컴포넌트 재사용성**: Atomic Design 패턴 적용
+- **타입 안전성**: TypeScript strict 모드 활용
+- **성능 최적화**: 코드 스플리팅 및 이미지 최적화
+- **반응형 설계**: 모바일 퍼스트 접근법
+
+## 🌟 특별한 기능
+
+### Web Speech API 통합
+- 브라우저 네이티브 TTS 기능 활용
+- 한국어 음성 합성 최적화
+- 재생 속도 조절 (0.8배속 기본 설정)
+- 크로스 브라우저 호환성 확보
+
+### 드래그앤드롭 시스템
+- 직관적인 단어 배열 인터페이스
+- 터치 디바이스 완벽 지원
+- 시각적 피드백 및 애니메이션
+- 접근성 준수 키보드 네비게이션
+
+### 학습 진도 관리
+- 실시간 진도 추적 시스템
+- 개인화된 학습 통계
+- 목표 설정 및 달성률 계산
+- 연속 학습 동기부여 시스템
+
+## 📄 라이선스
+
+이 프로젝트는 교육 목적으로 개발되었습니다.
+
+## 🤝 기여하기
+
+프로젝트 개선에 기여하고 싶으시다면:
+
+1. 이슈 등록을 통한 버그 리포트 및 기능 제안
+2. Pull Request를 통한 코드 기여
+3. 문서화 및 번역 작업 참여
+
+---
+
+**KoLang**와 함께 즐겁고 효과적인 한국어 학습을 시작해보세요! 🇰🇷✨
