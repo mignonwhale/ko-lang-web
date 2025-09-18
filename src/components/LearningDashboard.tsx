@@ -143,7 +143,7 @@ export default function LearningDashboard({ stats }: LearningDashboardProps) {
                 <Trophy className="size-4 text-green-600" />
               </div>
               <div className="flex-1">
-                <p className="text-sm">스토리 "카페에서의 대화" 완료</p>
+                <p className="text-sm">스토리 &quot;카페에서의 대화&quot; 완료</p>
                 <p className="text-xs text-muted-foreground">2시간 전</p>
               </div>
             </div>

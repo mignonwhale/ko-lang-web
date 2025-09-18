@@ -65,7 +65,7 @@ export default function WordArrangeQuiz() {
     if (availableWords.includes(draggedItem)) {
       // 사용 가능한 단어에서 선택된 단어로 이동
       const newAvailable = availableWords.filter(i => i !== draggedItem);
-      let newSelected = [...selectedWords];
+      const newSelected = [...selectedWords];
 
       if (targetIndex !== undefined && targetIndex < newSelected.length) {
         newSelected.splice(targetIndex, 0, draggedItem);
@@ -78,7 +78,7 @@ export default function WordArrangeQuiz() {
     } else if (selectedWords.includes(draggedItem)) {
       // 선택된 단어들 간의 재배열
       const currentIndex = selectedWords.indexOf(draggedItem);
-      let newSelected = [...selectedWords];
+      const newSelected = [...selectedWords];
       newSelected.splice(currentIndex, 1);
 
       if (targetIndex !== undefined && targetIndex <= newSelected.length) {
